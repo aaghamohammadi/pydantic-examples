@@ -1,6 +1,7 @@
-from pydantic import BaseModel, ValidationError
-from typing import List
 from pprint import pprint
+from typing import List
+
+from pydantic import BaseModel, ValidationError
 
 
 class Student(BaseModel):
@@ -20,7 +21,6 @@ s1 = Student(
 )
 
 pprint(s1.model_dump())
-
 
 data = {
     "stno": "not an integer",
