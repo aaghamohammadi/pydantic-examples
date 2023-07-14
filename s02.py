@@ -8,7 +8,7 @@ from pydantic import BaseModel
 
 class TreeNode(BaseModel):
     value: int
-    children: List[TreeNode] = []
+    children: Optional[List[TreeNode]] = []
 
     def add_child(self, child: TreeNode) -> None:
         self.children.append(child)
