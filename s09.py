@@ -12,7 +12,7 @@ class User(BaseModel):
 
     @model_validator(mode="before")
     @classmethod
-    def check_card_number_omitted(cls, data: Any) -> Any:
+    def check_identity_omitted(cls, data: Any) -> Any:
         if isinstance(data, dict) and "id" in data:
             raise ValueError("id should not be included")
         return data
